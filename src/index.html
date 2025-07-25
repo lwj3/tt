@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>This is our Storys</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default_dev.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions_dev.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* This is our story </span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Charon"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Pluto"</span>);<br />
+				<span class="comments">// July 21, 2020, I send hi to U By SOUL. </span><br />
+				i.sendMessaeTo(u);<br />
+				<span class="comments">// July 23 2020 I met U and had dinner.</span><br />
+				i.met(u);<br />
+                <span class="comments">// July 25 2020 I had dinner with you .</span><br />
+				i.dinnerWith(u);<br />
+                <span class="comments">// July 29 2020 I let U play in my house, and.</span><br />
+				i.letUGoMyHome(u);<br />
+				<span class="comments">// August 1 2020 I climb Emei mountain with U.</span><br />
+				i.climbEMMountainWith(u);<br />
+                <span class="comments">// August 4 2020 we have hot pot in your home.</span><br />
+				i.haveHotPotInUhome();<br />
+				<span class="keyword">To Be Continue...</span>
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Pluto, I have met with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						- Forever Charon<br/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright © 2020 - present  luwejun
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date('July 21, 2020 11:15:30');
+		// together.setFullYear(2019, 5, 28);
+		// together.setHours(20);
+		// together.setMinutes(0);
+		// together.setSeconds(0);
+		// together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
