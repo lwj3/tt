@@ -17,4 +17,4 @@
 
 最后：*愿往后的时光都是崭新的，去记录，去寻找，去做梦，愿我们都能成为自己想成为的人*。
 
-项目主页： [https://luweijun.gitee.io/love/](https://luweijun.gitee.io/love/) 
+项目主页： [https://love.luweijun.con/](https://love.luweijun.com/) 
